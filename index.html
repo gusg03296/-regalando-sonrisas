@@ -15,8 +15,16 @@ body{margin:0;font-family:Arial;background:#f4f6f9;}
 button{padding:15px;background:#ff6b6b;color:white;border:none;border-radius:8px;font-size:16px;}
 </style>
 </head>
+  <script 
+  src="https://www.paypal.com/sdk/js?client-id=BAABLZ4fgmezEBDNM-sseNQEWtDSj3KtQuxK9w1RivVxpqwWup0N78HgkLoW3UocCljMK0ofR5DJSbnPrs&components=hosted-buttons&disable-funding=venmo&currency=MXN">
+</script>
 <body>
-
+<div id="paypal-container-AZXX3NA4TQ4VG"></div>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "AZXX3NA4TQ4VG",
+  }).render("#paypal-container-AZXX3NA4TQ4VG")
+</script>
 <div class="hero">
 <h1>🎁 Regalando Sonrisas MX</h1>
 <p>Apoyando a niños vulnerables y madres jóvenes en México</p>
