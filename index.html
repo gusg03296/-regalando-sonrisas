@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regalando Sonrisas MX</title>
+<script src="https://www.paypal.com/sdk/js?client-id=TU_CLIENT_ID&currency=MXN"></script>
+<style>
+body{margin:0;font-family:Arial;background:#f4f6f9;}
+.hero{background:#ff6b6b;color:white;text-align:center;padding:60px 20px;}
+.section{max-width:900px;margin:auto;padding:40px 20px;}
+.card{background:white;padding:30px;border-radius:10px;margin-bottom:25px;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;}
+.gallery img{width:100%;border-radius:8px;}
+button{padding:15px;background:#ff6b6b;color:white;border:none;border-radius:8px;font-size:16px;}
+</style>
+</head>
+<body>
+
+<div class="hero">
+<h1>🎁 Regalando Sonrisas MX</h1>
+<p>Apoyando a niños vulnerables y madres jóvenes en México</p>
+</div>
+
+<div class="section">
+
+<div class="card">
+<h2>Nuestra Historia</h2>
+<p>Esta es nuestra primera campaña oficial. Estamos recaudando fondos para realizar la primera entrega solidaria documentada.</p>
+</div>
+
+<div class="card">
+<h2>¿En qué se usará tu apoyo?</h2>
+<ul>
+<li>Compra de juguetes nuevos</li>
+<li>Despensas básicas</li>
+<li>Artículos esenciales para bebés</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Transparencia</h2>
+<p>Las evidencias reales de compras y entregas se publicarán aquí después de la primera entrega.</p>
+<div class="gallery">
+<img src="img/entrega-proximamente.jpg">
+<img src="img/recibo-proximamente.jpg">
+</div>
+</div>
+
+<div class="card">
+<h2>Meta: $30,000 MXN</h2>
+<div id="paypal-button-container"></div>
+</div>
+
+</div>
+
+<script>
+paypal.Buttons({
+createOrder: function(data, actions) {
+return actions.order.create({
+purchase_units: [{
+amount: { value: "100" }
+}]
+});
+}
+}).render('#paypal-button-container');
+</script>
+
+</body>
+</html>
